@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+.mainForm{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label{
+    font-family: 'Inter', sans-serif;
+}
+
+select{
+    margin-top: .5rem;
+    font-size: 1rem;
+    width: 100%;
+    height: 40%;
+    border-color:gainsboro ;
+    border-radius: 10px;
+}
+
+
+input{
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.field-inline-block{
+    display: flex;
+    /* display: inline-block; */
+    margin-right: 5px;
+    margin-left: 5px;
+    flex-direction: column;
+    
+}
+
+.date-input{
+    font-size: 1rem !important;
+    height: 1.75rem;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+}
+
+
+.first-div{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    height: 60%;
+    padding: 10px;
+    display: flex;
+    
+}
+
+.input-style{
+    margin-top: .5rem;
+    border: 1px solid gainsboro;
+    border-radius:10px ;
+    width: 99%;
+    height: 2.7rem;
+}
+.last-name-input-style{
+    margin-top: .5rem;
+    border: 1px solid gainsboro;
+    border-radius:10px ;
+    width: 100%;
+    height: 2.7rem;
+}
+.name-input-style{
+    margin-top: .5rem;
+    border: 1px solid gainsboro;
+    border-radius:10px ;
+    width: 90%;
+    height: 2.7rem;
+}
+.fields-block{
+    display: flex;
+    margin-top: .5rem;
+}
+
+.date-size-year{
+    width: 5rem;
+    height: 2rem;
+}
+
+.date-size{
+    width: 3rem;
+    height: 2rem;
+}
+
+.date-birth{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.inactive{
+    width: 65%;
+    height: 3rem;
+    border-radius:20px ;
+    background-color: transparent;
+    border:2px solid gainsboro ;
+    color: gainsboro;
+}
+.active{
+    width: 65%;
+    height: 3rem;
+    border-radius:20px ;
+    background-color: transparent;
+    border:2px solid black ;
+    color: black;
+    cursor: pointer;
+}

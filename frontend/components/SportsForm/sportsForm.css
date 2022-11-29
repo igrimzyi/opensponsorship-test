@@ -1,0 +1,119 @@
+.sportsForm{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.second-div{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    /* width: 25%; */
+    height: 75%;
+    padding: 10px;
+    display: flex;
+    
+}
+
+.title{
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+textarea{
+    padding: 0.5rem;
+    color: black;
+    resize: none;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    width: 95%;
+    height: 78%;
+    font-family: 'Inter', sans-serif;
+}
+.text-group{
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.searchBox{
+    margin-top: 1rem;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    border:1px solid gainsboro ;
+    position: relative;
+}
+
+.select-sport{
+    padding: 1rem;
+    width: 100%;
+
+}
+
+.select-option{
+    font-family: 'Inter', sans-serif;
+    margin-top: .5rem;
+}
+
+.icon-tag{
+    border: 1px solid gainsboro;
+    border-radius:10px ;
+    margin: .5rem;
+    padding: .5rem;
+    font-family: 'Inter', sans-serif;
+
+    
+}
+.tag-group{
+    
+    max-width: 100%;
+    white-space: normal !important;
+    display: grid;
+    flex-wrap: wrap;
+    overflow: scroll;
+    max-height: 50%;
+    justify-items: center;
+
+}
+.delete{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.buttons-group{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.inactive{
+    width: 65%;
+    height: 3rem;
+    border-radius:20px ;
+    background-color: transparent;
+    border:2px solid gainsboro ;
+    color: gainsboro;
+}
+.back-button{
+    cursor: pointer;
+    width: 65%;
+    height: 3rem;
+    border-radius:20px ;
+    background-color: transparent;
+    border:2px solid black ;
+    color: black;
+}
+.form-body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

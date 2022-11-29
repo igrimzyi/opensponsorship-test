@@ -1,0 +1,6 @@
+{
+    "pictures":[
+        {"value":"guy", "label": "guy" },
+    { "value":"girl", "label": "girl" }
+    ]
+}
