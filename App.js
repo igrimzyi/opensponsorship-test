@@ -30,7 +30,7 @@ const App = () =>{
 
 
     useEffect(()=>{
-        axios.get('https://main.d1jhhgqx2cgwh1.amplifyapp.com/api/profile')
+        axios.get('http://localhost:4000/api/profile')
             .then((res)=>{
                 let profile = []
                 console.log(res.data)
@@ -65,7 +65,7 @@ const App = () =>{
 
         console.log(body)
 
-        axios.post('https://main.d1jhhgqx2cgwh1.amplifyapp.com/api/profile', body)
+        axios.post('http://localhost:4000/api/profile', body)
             .then((res)=>{
 
                 console.log(res);
