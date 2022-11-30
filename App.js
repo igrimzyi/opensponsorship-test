@@ -26,7 +26,8 @@ const App = () =>{
     const [interest,setInterest] = useState('');
 
     const [chosenProfile,setChosenProfile] =useState(null); 
-    const [profiles, setProfiles] = useState();    
+    const [profiles, setProfiles] = useState();   
+    const [response, setResponse] = useState(null); 
 
 
     useEffect(()=>{
@@ -74,12 +75,14 @@ const App = () =>{
                 console.log(obj)
 
                 setProfiles([...profiles, obj])
-                
-
+                setResponse(res.data.message)
+                setTimeout(()=>{
+                    setResponse(null)
+                },3000)
+               
 
             })
             .catch((err)=>{
-
             })
 
 
@@ -113,7 +116,7 @@ const App = () =>{
         <div className='main'>
              {yieldStep()}
             <Selector chosenProfile={chosenProfile} setChosenProfile={setChosenProfile} profiles={profiles}/>
-
+            {response != null && <div className='response'>{response}</div>}
             {chosenProfile!= null && <Profile chosenProfile={chosenProfile}/>}
         </div>
     )
