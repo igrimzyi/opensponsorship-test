@@ -5,24 +5,47 @@ import SportsForm from './components/SportsForm/SportsForm';
 import Profile from './components/Profile/Profile';
 import Finish from './components/Finish/Finish';
 import axios from 'axios';
+import Selector from './components/selector/Selector';
 
 
 
 const App = () =>{
 
-    const [step,setStep] = useState(2);
+    const [step,setStep] = useState(0);
 
     const [name, setName] = useState('');
+    const [lastName,setLastName] = useState('')
+
     const [birth, setBirth] = useState('');
     const [location, setLocation] = useState('');
     const [gender,setGender] = useState('');
-    const [lastName,setLastName] = useState('')
     const [team,setTeam] = useState('');
     const [sports,setSports] = useState([]);
     const [about,setAbout] = useState('');
     const [picture,setPicture] = useState('');
     const [interest,setInterest] = useState('');
-    
+
+    const [chosenProfile,setChosenProfile] =useState(null); 
+    const [profiles, setProfiles] = useState();    
+
+
+    useEffect(()=>{
+        axios.get('http://localhost:4000/api/profile')
+            .then((res)=>{
+                let profile = []
+                console.log(res.data)
+                res.data.map((e,i)=>{
+                    let obj = {value:res.data[i]._id,label:res.data[i].name}
+                    profile.push(obj)
+                });
+
+                setProfiles(profile)
+
+            })
+            .catch((err)=>{
+
+            })
+    },[])
 
     const submit = (e) =>{
         e.preventDefault()
@@ -44,7 +67,16 @@ const App = () =>{
 
         axios.post('http://localhost:4000/api/profile', body)
             .then((res)=>{
+
+                console.log(res);
+                let obj = {"value":res.data.saveProfile._id,"label":res.data.saveProfile.name};
+
+                console.log(obj)
+
+                setProfiles([...profiles, obj])
                 
+
+
             })
             .catch((err)=>{
 
@@ -55,6 +87,7 @@ const App = () =>{
 
 
     const yieldStep = () =>{
+        if(chosenProfile === null){
         switch(step){
             case 0: 
                 return(
@@ -72,13 +105,16 @@ const App = () =>{
                    <Finish setInterest={setInterest} interest={interest}  setStep={setStep} step={step} picture={picture} setPicture={setPicture} submit={submit}/>
                 )
         }
-        
+    }
     }
 
 
     return(
         <div className='main'>
-            {yieldStep()}
+             {yieldStep()}
+            <Selector chosenProfile={chosenProfile} setChosenProfile={setChosenProfile} profiles={profiles}/>
+
+            {chosenProfile!= null && <Profile chosenProfile={chosenProfile}/>}
         </div>
     )
 }

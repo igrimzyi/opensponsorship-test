@@ -5,7 +5,6 @@ const ProfileSchema = new mongoose.Schema({
     name:{
         type:String,
         required:true,
-        unique:true
         },
     DOB:{
         type:String,
@@ -27,6 +26,15 @@ const ProfileSchema = new mongoose.Schema({
     }, 
     sports:{
         type:Array,
+        required:true
+    },
+    location:{
+        type:String,
+        required:true
+    }
+    ,
+    gender:{
+        type:String,
         required:true
     }
 })

@@ -50,7 +50,7 @@ input{
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-    width: 25%;
+    width: 60%;
     height: 60%;
     padding: 10px;
     display: flex;
@@ -115,4 +115,19 @@ input{
     border:2px solid black ;
     color: black;
     cursor: pointer;
+}
+
+@media screen and (min-width: 500px) {
+    .first-div{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+        height: 60%;
+        padding: 10px;
+        display: flex;
+        
+    }
+
 }

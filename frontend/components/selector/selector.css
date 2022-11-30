@@ -1,0 +1,18 @@
+.selector{
+    width: 30%;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    bottom: 5;
+    display: flex;
+}
+
+.add-button{
+    cursor: pointer;
+    width: 25%;
+    height: 3rem;
+    border-radius:20px ;
+    background-color: transparent;
+    border:2px solid black ;
+    color: black;
+}
