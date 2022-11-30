@@ -30,7 +30,7 @@ const App = () =>{
 
 
     useEffect(()=>{
-        axios.get('http://localhost:4000/api/profile')
+        axios.get('https://testcodebackend.herokuapp.com/api/profile')
             .then((res)=>{
                 let profile = []
                 console.log(res.data)
@@ -65,7 +65,7 @@ const App = () =>{
 
         console.log(body)
 
-        axios.post('http://localhost:4000/api/profile', body)
+        axios.post('https://testcodebackend.herokuapp.com/api/profile', body)
             .then((res)=>{
 
                 console.log(res);

@@ -12,7 +12,7 @@ const Profile = ({id,chosenProfile}) =>{
 
     useEffect(()=>{
        
-        axios.get(`http://localhost:4000/api/profile/${chosenProfile}`)
+        axios.get(`https://testcodebackend.herokuapp.com/api/profile/${chosenProfile}`)
             .then((res)=>{
                 console.log(res)
                 setFound(res.data)
