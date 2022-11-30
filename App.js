@@ -83,10 +83,6 @@ const App = () =>{
 
             })
             .catch((err)=>{
-                setResponse("Your name has to be unique")
-                setTimeout(()=>{
-                    setResponse(null)
-                },3000)
             })
 
 
